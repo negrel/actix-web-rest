@@ -185,25 +185,35 @@ dependencies = [
 
 [[package]]
 name = "actix-web-rest"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "actix-web",
- "actix-web-rest-macros",
+ "actix-web-rest-macros 0.1.0",
  "http",
  "serde",
  "strum",
- "thiserror",
 ]
 
 [[package]]
 name = "actix-web-rest-macros"
 version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4b5598d0f087fcb5cb56a8eec8f686a29f2ff1663d6b33071949f5b8911998f9"
 dependencies = [
  "http",
  "proc-macro2",
  "quote",
  "serde",
  "strum_macros",
+ "syn 2.0.18",
+]
+
+[[package]]
+name = "actix-web-rest-macros"
+version = "0.2.0"
+dependencies = [
+ "proc-macro2",
+ "quote",
  "syn 2.0.18",
 ]
 
@@ -966,26 +976,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
-]
-
-[[package]]
-name = "thiserror"
-version = "1.0.40"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "978c9a314bd8dc99be594bc3c175faaa9794be04a5a5e153caba6915336cebac"
-dependencies = [
- "thiserror-impl",
-]
-
-[[package]]
-name = "thiserror-impl"
-version = "1.0.40"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f9456a42c5b0d803c8cd86e73dd7cc9edd429499f37a3550d286d5e86720569f"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.18",
 ]
 
 [[package]]
