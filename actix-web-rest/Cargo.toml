@@ -7,6 +7,7 @@ desciption = "Opiniated toolkit to build restful API using actix-web."
 documentation = "https://docs.rs/actix-web-rest"
 repository = "https://github.com/negrel/actix-web-rest"
 readme = "../README.md"
+keywords = ["web"]
 
 [lib]
 name = "actix_web_rest"

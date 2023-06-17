@@ -7,6 +7,7 @@ desciption = "Macros for actix-web-rest."
 documentation = "https://docs.rs/actix-web-rest-macros"
 repository = "https://github.com/negrel/actix-web-rest"
 readme = "../README.md"
+keywords = ["web"]
 
 [lib]
 name = "actix_web_rest_macros"
