@@ -1,13 +1,15 @@
 [package]
 name = "actix-web-rest"
-version = "0.1.0"
-edition = "2021"
-license-file = "../LICENSE"
-description = "Opiniated toolkit to build restful API using actix-web."
+authors.workspace = true
+edition.workspace = true
+license-file.workspace = true
+version.workspace = true
+description.workspace = true
+repository.workspace = true
+keywords.workspace = true
+readme.workspace = true
 documentation = "https://docs.rs/actix-web-rest"
-repository = "https://github.com/negrel/actix-web-rest"
-readme = "../README.md"
-keywords = ["web"]
+
 
 [lib]
 name = "actix_web_rest"
@@ -16,7 +18,7 @@ path = "src/lib.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-actix-web-rest-macros = { path = "../actix-web-rest-macros/" }
+actix-web-rest-macros = { version = "0.1.0" }
 actix-web = { workspace = true }
 http = { workspace = true }
 serde = { workspace = true }

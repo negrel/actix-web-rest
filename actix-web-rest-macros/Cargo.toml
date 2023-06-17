@@ -1,13 +1,14 @@
 [package]
 name = "actix-web-rest-macros"
-version = "0.1.0"
-edition = "2021"
-license-file = "../LICENSE"
-description = "Macros for actix-web-rest."
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license-file.workspace = true
+description.workspace = true
+repository.workspace = true
+keywords.workspace = true
+readme.workspace = true
 documentation = "https://docs.rs/actix-web-rest-macros"
-repository = "https://github.com/negrel/actix-web-rest"
-readme = "../README.md"
-keywords = ["web"]
 
 [lib]
 name = "actix_web_rest_macros"

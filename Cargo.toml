@@ -9,6 +9,17 @@ exclude = [
 	"examples/"
 ]
 
+[workspace.package]
+edition = "2021"
+authors = ["Alexandre Negrel"]
+version = "0.1.0"
+description = "Opiniated toolkit to build restful API using actix-web."
+repository = "https://github.com/negrel/actix-web-rest"
+readme = "README.md"
+keywords = ["web"]
+license-file = "LICENSE"
+
+
 [workspace.dependencies]
 actix-web = "4"
 anyhow = "1"
