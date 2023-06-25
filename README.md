@@ -1,30 +1,13 @@
 # `actix-web-rest` - Opiniated toolkit to build restful API using actix-web.
 
+This crate contains utility to speed up the development of RESTful API using actix-web:
+- `rest_error` attribute macros
+
 ## Why ?
 
 :zap: Gotta go fast!
 
-## Getting started
-
-```shell
-# Create a new project.
-cargo init my_api
-
-# Add actix-web-rest to your project.
-cargo add
-````
-
-### Building the project
-
-```shell
-make build
-```
-
-### Running the tests
-
-```shell
-make tests
-```
+:student: Learn procedural macros.
 
 ## Contributing
 
