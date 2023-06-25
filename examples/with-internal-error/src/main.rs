@@ -1,22 +1,17 @@
 use actix_web::{web, App, HttpResponse, HttpServer, ResponseError};
-use actix_web_rest::{actix_web, http::StatusCode, rest_error};
+use actix_web_rest::{http::StatusCode, rest_error};
 use anyhow::anyhow;
 
 #[allow(clippy::enum_variant_names)]
-#[rest_error]
+#[rest_error(internal_error)]
 enum MyEndpointError {
-    #[rest(status_code = StatusCode::OK)]
+    #[rest(status_code = StatusCode::BAD_REQUEST)]
     #[error("error foo")]
     FooError,
 
-    #[rest(status_code = StatusCode::OK)]
+    #[rest(status_code = StatusCode::CONFLICT)]
     #[error("error bar")]
     BarError,
-
-    #[rest(status_code = StatusCode::INTERNAL_SERVER_ERROR)]
-    #[error(transparent)]
-    #[serde(skip)]
-    UnexpectedError(#[from] anyhow::Error),
 }
 
 async fn handler(path: web::Path<String>) -> Result<HttpResponse, impl ResponseError> {
@@ -24,7 +19,7 @@ async fn handler(path: web::Path<String>) -> Result<HttpResponse, impl ResponseE
     match path_param.as_ref() {
         "foo" => Err(MyEndpointError::FooError),
         "bar" => Err(MyEndpointError::BarError),
-        _ => Err(MyEndpointError::from(anyhow!(
+        _ => Err(MyEndpointError::InternalError(anyhow!(
             "unexpected path params: {path_param}"
         ))),
     }
